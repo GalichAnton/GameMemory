@@ -6,3 +6,27 @@
   grid-template-rows: repeat(6, 1fr);
   gap: 20px;
 }
+
+.main {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1280px;
+  min-width: 320px;
+  min-height: 100vh;
+
+  padding: 0;
+  margin: 0 auto;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+@media screen and (max-width: 750px) {
+  .main {
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+}

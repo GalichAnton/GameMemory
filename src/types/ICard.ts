@@ -1,5 +1,5 @@
-export interface ICard{
-  id: number
-  imgUrl: string
-  isUp:boolean
+export interface ICard {
+  link: string;
+  text: string;
+  flip: boolean;
 }

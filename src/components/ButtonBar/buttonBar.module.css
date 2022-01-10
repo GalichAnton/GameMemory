@@ -1,0 +1,104 @@
+.controls {
+  font-size: 1.5rem;
+  font-weight: normal;
+  letter-spacing: .1rem;
+  text-align: center;
+
+  border: 1px solid #999;
+  border-radius: 5px;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 20%;
+  max-width: 80vmin;
+  min-width: 312px;
+
+  padding: 10px;
+  margin: 10px 0px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+}
+
+.controls__btnContainer {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.controls__btn {
+  flex-grow: 1;
+  min-width: 40px;
+  min-height: 40px;
+
+  border: 1px solid #999;
+  border-radius: 5px;
+
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: center center;
+  background-blend-mode: multiply;
+}
+
+.controls__btn:hover:not(:disabled) {
+  background-color: rgba(230, 230, 230, .3);
+}
+
+.controls__btn:disabled {
+  opacity: .5;
+}
+
+.controls__btn + .controls__btn {
+  margin: 0;
+  margin-left: 10px;
+}
+
+.controls__btn_start {
+  background-image: url(../../images/btn-start.png);
+}
+
+.controls__btn_pause {
+  background-image: url(../../images/btn-pause.png);
+}
+
+.controls__btn_results {
+  background-image: url(../../images/btn-results.png);
+}
+
+.controls__timeContainer {
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+
+  box-sizing: border-box;
+  padding: 0 5px;
+  margin: 0;
+  margin-left: 10px;
+
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .controls {
+    flex-flow: column nowrap;
+    margin-bottom: 30px;
+  }
+
+  .controls__timeContainer {
+    padding: 5px 0;
+    margin: 0;
+    margin-top: 10px;
+  }
+}
